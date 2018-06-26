@@ -1,0 +1,258 @@
+/*============================
+	    Color Palette
+============================*/
+/*
+	*	Header Background, Links 				#6ED3CF		Blue-Green
+	*	Primary Font							#9068BE		Light Purple
+	*	Content Background, Secondary Font		#E1E8F0		Light Grey
+	*	Main Header Border						#E62739		Red
+	*	Footer Background						#F7F8FC		Light
+	*	Main Content Border						#57585D		Dark
+*/
+
+/*============================
+	    Global Styles
+============================*/
+
+html {
+	box-sizing: border-box;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body {
+	background: #E1E8F0;
+}
+
+header {
+	background: #57585D;
+	color: #F7F8FC;
+	font-size: 2em;
+	padding: 2.5% 0;
+	text-align: center;
+}
+
+
+.container {
+	margin: 5% auto;
+	width: 80vw;
+/* 	background: #E1E8F0; */
+	background: #6ED3CF;
+/* 	background: yellow; */
+	border: 1px solid #57585D;
+	border-radius: 0.25em;
+	
+	display: grid;
+	grid: 
+		"cat score" 5vh
+		"button score" 5vh
+		"message message" auto
+		"canvas canvas" auto
+		"word word" auto
+		"catD catD" auto
+		"letters letters"auto
+		/ 50% 50%;
+}
+.custom-select {
+	grid-area: cat;
+	
+	position: relative;
+	display: block;
+	width: 90%;
+	height: 90%;
+/* 	line-height: 3; */
+/* 	background: #2c3e50; */
+	overflow: hidden;
+	border-radius: .25em;
+	margin: 5%;
+}
+.custom-select::after:hover {
+	background: black;
+}
+.custom-select::after {
+	content: '\25BC';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+/* 	padding: 0 1em; */
+	background: #57585D;
+	pointer-events: none;
+	width: 25%;
+	color: #F7F8FC;
+}
+/* Transition */
+.custom-select:hover::after {
+/* 	color: black; */
+	background: #9068BE;
+}
+.custom-select::after {
+  transition: .25s all ease;
+}
+#category {
+	appearance: none;
+	background: #57585D;
+	outline: none;
+	border: none !important;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	color: #F7F8FC;
+	font-size: 1.2em;
+	text-indent: 1em;
+}
+.button {
+	grid-area: button;
+	width: 90%;
+	height: 90%;
+/* 	line-height: 3; */
+/* 	background: #2c3e50; */
+	overflow: hidden;
+	border-radius: .25em;
+	margin: 5%;
+	background: #57585D;
+	color: #F7F8FC;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	font-size: 1.5em;
+	cursor: pointer;
+}
+.button:hover {
+	background: #9068BE;
+}
+.scoreboard {
+	grid-area: score;
+	height: 90%;
+	width: 80%;
+/* 	background: green; */
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	text-align: end;
+/* 	padding: 10%; */
+	margin: 5% 10%;
+	font-size: 1.2em;
+	color: #f7F8FC;
+}
+.messageDisplay {
+	grid-area: message;
+	background: #9068BE;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-top: 5%;
+	min-height: 5vh;
+	color: #F7F8FC;
+	font-size: 1.25em;
+	text-align: center;
+}
+#canvas {
+	grid-area: canvas;
+	border: 1px solid #57585D;
+	border-radius: 0.25em;
+/*
+	width: 90%;
+	height: 90%;
+*/
+/*
+	width: 250px;
+	height: 250px;
+*/
+	margin: 5% auto;
+	background: #E1E8F0;
+}
+#wordDisplay {
+	grid-area: word;
+	width: 90%;
+	margin: 5%;
+	margin-top: 0;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	font-size: 1.5em;
+}
+#catDisplay {
+	grid-area: catD;
+	display: grid;
+	align-items: center;
+	justify-content: center;
+	width: 90%;
+	margin: 5%;
+	margin-top: 0;
+	color: #F7F8FC;
+	font-size: 1.5em;
+}
+.alphabet {
+	grid-area: letters;
+	width: 90%;
+	margin: 5%;
+	margin-top: 0;
+	background: #9068BE;
+	border: 1px solid #57585D;
+	border-radius: 0.25em;
+}
+.alphabet ul,
+.alphabet li {
+	display: flex;
+	flex-flow: row wrap;
+/* 	display: flex; */
+	justify-content: center;
+	align-items: center;
+}
+.letters {
+	border: 1px solid #57585D;
+	border-radius: 0.25em;
+	padding: 5%;
+	width: 2em;
+	height: 2em;
+/* 	margin: 0.25em; */
+	margin: 1%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #6ED3CF;
+	cursor: pointer;
+	color: #57585D;
+	position: relative;
+}
+.letters:hover {
+	background: #57585D;
+	color: #F7F8FC;
+}
+.guessed {
+	background: #57585D;
+	color: #E62739;
+	color: #F7F8FC;
+}
+.guessed:before, .guessed:after {
+    position: absolute;
+    content: '';
+    background: #E62739;
+    display: block;
+    width: 100%;
+    height: 5px;
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.guessed:after {
+    -webkit-transform: rotate(45deg);  
+    transform: rotate(45deg);
+}
+#guessDisplay {
+	display: none;
+}

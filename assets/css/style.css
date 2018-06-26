@@ -1,0 +1,88 @@
+/*============================
+	    Color Palette
+============================*/
+/*
+	*	Header Background, Links 				#6ED3CF		Blue-Green
+	*	Primary Font							#9068BE		Light Purple
+	*	Content Background, Secondary Font		#E1E8F0		Light Grey
+	*	Main Header Border						#E62739		Red
+	*	Footer Background						#F7F8FC		Light
+	*	Main Content Border						#57585D		Dark
+*/
+
+/*============================
+	    Global Styles
+============================*/
+
+html {
+	box-sizing: border-box;
+}
+* {
+	margin: 0;
+	padding: 0;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+header {
+	background: #57585D;
+	color: #F7F8FC;
+	font-size: 2em;
+	padding: 2.5% 0;
+	text-align: center;
+}
+
+
+.container {
+	margin: 0 auto;
+	width: 80vw;
+/* 	background: #E1E8F0; */
+	background: yellow;
+}
+.custom-select {
+	position: relative;
+	display: block;
+	width: 10em;
+	height: 3em;
+/* 	line-height: 3; */
+/* 	background: #2c3e50; */
+	overflow: hidden;
+	border-radius: .25em;
+	margin-top: 5%;
+}
+.custom-select::after {
+	content: '\25BC';
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+/* 	padding: 0 1em; */
+	background: #6ED3CF;
+	pointer-events: none;
+	width: 25%;
+}
+/* Transition */
+.custom-select:hover::after {
+	color: #f39c12;
+}
+.custom-select::after {
+  -webkit-transition: .25s all ease;
+  -o-transition: .25s all ease;
+  transition: .25s all ease;
+}
+#category {
+	appearance: none;
+	background: #57585D;
+	outline: none;
+	border: none !important;
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	color: #F7F8FC;
+	font-size: 1.2em;
+	text-indent: 2em;
+}
