@@ -1,0 +1,96 @@
+<!DOCTYPE HTML>
+<html lang="en-us">
+	
+<head>
+	<title>Hangman</title>
+	<meta charset="UTF-8">
+	<meta name="description" content="Hangman Game">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/normalize.css">
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/css/style2.css">
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.3.1.js"></script>
+	<script type="text/javascript" src="assets/javascript/canvas2.js" defer></script>
+	<script type="text/javascript" src="assets/javascript/game3.js" defer></script>
+</head>
+
+<body>
+<header role="header">
+	<h1>Hangman</h1>
+</header>
+<div class="container">
+	
+<!-- 	<div class="buttons-container" -->
+		<div class="custom-select select-start">
+			<select id="category">
+				<option>Movies</option>
+				<option>Sports</option>
+				<option>Long Category Name</option>
+			</select>
+		</div>
+	
+		<div class="button button-start" onclick="play()">
+			Play
+		</div>
+<!-- 	</div> -->
+	
+	<div class="scoreboard scoreboard-start">
+		<ul>
+			<li>Wins: <span id="winsDisplay">0</span></li>
+			<li>Losses: <span id="lossesDisplay">0</span></li>
+			<li>Streak: <span id="streakDisplay">0</span></li>
+		</ul>
+	</div>
+	
+	<div class="messageDisplay msg-start" id="messDisplay">
+		Welcome to Hangman!
+	</div>
+	
+	<canvas id="canvas" class="canvas-start" width="250px" height="250px">
+		Your browser does not support the canvas element.
+	</canvas>
+	
+	<div id="wordDisplay" class="word-start">
+		
+	</div>
+	
+	<div id="catDisplay">
+		Category
+	</div>
+	
+	<div class="alphabet alpha-start">
+		<ul>
+			<li class="letters" id="a">A</li>
+			<li class="letters" id="b">B</li>
+			<li class="letters" id="c">C</li>
+			<li class="letters" id="d">D</li>
+			<li class="letters" id="e">E</li>
+			<li class="letters" id="f">F</li>
+			<li class="letters" id="g">G</li>
+			<li class="letters" id="h">H</li>
+			<li class="letters" id="i">I</li>
+			<li class="letters" id="j">J</li>
+			<li class="letters" id="k">K</li>
+			<li class="letters" id="l">L</li>
+			<li class="letters" id="m">M</li>
+			<li class="letters" id="n">N</li>
+			<li class="letters" id="o">O</li>
+			<li class="letters" id="p">P</li>
+			<li class="letters" id="q">Q</li>
+			<li class="letters" id="r">R</li>
+			<li class="letters" id="s">S</li>
+			<li class="letters" id="t">T</li>
+			<li class="letters" id="u">U</li>
+			<li class="letters" id="v">V</li>
+			<li class="letters" id="w">W</li>
+			<li class="letters" id="x">X</li>
+			<li class="letters" id="y">Y</li>
+			<li class="letters" id="z">Z</li>
+		</ul>
+	</div>
+		
+</div>
+<p id="guessDisplay"></p>
+
+</body>
+</html>

@@ -37,12 +37,28 @@ ctx.lineTo(200-30, 200);
 ctx.stroke();
 
 // Stickman:
+
+function drawStickman() {
+	drawHead();
+	drawBody();
+	drawLeftArm();
+	drawRightArm();
+	drawLeftLeg();
+	drawRightLeg();
+}
   
 function drawHead() {
 	ctx.strokeStyle="#57585D";
 	ctx.beginPath();
 	ctx.arc(70, 80, 15, 0, 2*Math.PI);
 	ctx.stroke();
+/*
+	clearBody();
+	clearLeftArm();
+	clearRightArm();
+	clearLeftLeg();
+	clearRightLeg();
+*/
 }
 
 function drawBody() {
@@ -50,6 +66,12 @@ function drawBody() {
 	ctx.moveTo(70, 95);
 	ctx.lineTo(70, 125);
 	ctx.stroke();
+/*
+	clearLeftArm();
+	clearRightArm();
+	clearLeftLeg();
+	clearRightLeg();
+*/
 }
 
 function drawLeftArm() {
@@ -57,6 +79,11 @@ function drawLeftArm() {
 	ctx.moveTo(70, 95);
 	ctx.lineTo(60, 125);
 	ctx.stroke();
+/*
+	clearRightArm();
+	clearLeftLeg();
+	clearRightLeg();
+*/
 }
 
 function drawRightArm() {
@@ -64,6 +91,10 @@ function drawRightArm() {
   	ctx.moveTo(70, 95);
 	ctx.lineTo(80, 125);
 	ctx.stroke();
+/*
+	clearLeftLeg();
+	clearRightLeg();
+*/
 }
 
 function drawLeftLeg() {
@@ -71,6 +102,7 @@ function drawLeftLeg() {
 	ctx.moveTo(70, 125);
 	ctx.lineTo(60, 155);
 	ctx.stroke();
+// 	clearRightLeg();
 }
 
 function drawRightLeg() {
@@ -116,5 +148,71 @@ function clearStickman() {
 		ctx.lineTo(80, 155);
 		ctx.stroke();
 
+	}
+}
+
+function clearHead() {
+	ctx.strokeStyle="#E1E8F0";
+	for(var i=0; i<11; i++) {
+		
+		// Head
+		ctx.beginPath();
+		ctx.arc(70, 80, 15, 0, 2*Math.PI);
+		ctx.stroke();
+	}
+}
+
+function clearBody() {
+	ctx.strokeStyle="#E1E8F0";
+	for(var i=0; i<11; i++) {
+		
+		// Body
+		ctx.moveTo(70, 95);
+		ctx.lineTo(70, 125);
+		ctx.stroke();
+	}
+}
+
+function clearLeftArm() {
+	ctx.strokeStyle="#E1E8F0";
+	for(var i=0; i<11; i++) {
+		
+		// Left Arm
+		ctx.moveTo(70, 95);
+		ctx.lineTo(60, 125);
+		ctx.stroke();
+	}
+}
+
+function clearRightArm() {
+	ctx.strokeStyle="#E1E8F0";
+	for(var i=0; i<11; i++) {
+		
+		// Right Arm
+	  	ctx.moveTo(70, 95);
+		ctx.lineTo(80, 125);
+		ctx.stroke();
+	}
+}
+
+function clearLeftLeg() {
+	ctx.strokeStyle="#E1E8F0";
+	for(var i=0; i<11; i++) {
+		
+		// Left Leg
+		ctx.moveTo(70, 125);
+		ctx.lineTo(60, 155);
+		ctx.stroke();
+	}
+}
+
+function clearRightLeg() {
+	ctx.strokeStyle="#E1E8F0";
+	for(var i=0; i<11; i++) {
+		
+		// Right Leg
+		ctx.moveTo(70, 125);
+		ctx.lineTo(80, 155);
+		ctx.stroke();
 	}
 }
