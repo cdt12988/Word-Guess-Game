@@ -11,7 +11,7 @@ var letters = document.getElementsByClassName('letters');
 
 
 function play() {
-
+console.log(game);
 	if(game === false) {
 	
 		var category = document.getElementById('category');
