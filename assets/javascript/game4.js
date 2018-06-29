@@ -74,8 +74,9 @@ function play() {
 		
 	// Assigns the category to the selected category
 		if(category.selectedIndex == 0) {
-			wordBank = movieBank;
-			catText = 'Movies';
+			var randomIndex = Math.floor(Math.random()*randomBank.length);		
+			wordBank = randomBank[randomIndex];
+			catText = randomCat[randomIndex];
 		} else if(category.selectedIndex == 1) {
 			wordBank = sportsBank;
 			catText = 'Sports';
@@ -94,6 +95,9 @@ function play() {
 		} else if(category.selectedIndex == 6) {
 			wordBank = musicBank;
 			catText = 'Music';
+		} else if(category.selectedIndex == 7) {
+			wordBank = movieBank;
+			catText = 'Movies';
 		} else {
 			wordBank = comicsBank;
 			catText = 'Comic Books';
