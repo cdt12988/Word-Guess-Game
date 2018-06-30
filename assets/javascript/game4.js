@@ -60,8 +60,8 @@ function resetButtons() {
 
 function play() {
 
-	// Only starts a new game if no current game exists (this could be changed or removed if desired)
-	if(game === false) {
+	// Checks if a current game exists already
+	if(!game) {
 	
 	// Resets initial game variables	
 		game = true;
@@ -136,8 +136,18 @@ function play() {
 		resetButtons();
 		displayMessage('Let\'s get started! Guess a letter!');
 	
+	// Confirms starting a new game if a current one exists -- if yes, then performs game loss actions
 	} else {
-		alert('You must finish your current game first!');
+		var restart = confirm('Starting a new game will cause you to lose your current one.  Would you like to start a new one anyway?');
+		if(restart) {
+			losses++;
+			streak = 0;
+			game = false;
+			winsDisplay.textContent = wins;
+			lossesDisplay.textContent = losses;
+			streakDisplay.textContent = streak;
+			play();
+		}
 	}
 }
 

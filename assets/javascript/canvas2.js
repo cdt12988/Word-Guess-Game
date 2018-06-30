@@ -21,6 +21,12 @@ ctx.moveTo(175-30, 45);
 ctx.lineTo(175-30, 200);
 ctx.stroke();
 
+// Top cross-bar
+
+ctx.moveTo(175-30, 70);
+ctx.lineTo(150-30, 45);
+ctx.stroke();
+
 // Bottom horizontal bar
 
 ctx.moveTo(70-30, 200);
