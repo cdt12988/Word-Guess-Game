@@ -4,6 +4,8 @@ Link to Game: [https://cdt12988.github.io/Word-Guess-Game](https://cdt12988.gith
 
 This app uses vanilla JavaScript to bring the classic game of Hangman to life!
 
+![Screenshot](https://cdt12988.github.io/images/portfolio/rps.PNG "Hangman Screenshot")
+
 ## Game Features
 
 ### Categories
