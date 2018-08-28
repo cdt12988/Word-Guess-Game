@@ -1,6 +1,6 @@
 # Hangman
 
-Link to Game: [https://cdt12988.github.io/Word-Guess-Game](https://cdt12988.github.io/Word-Guess-Game “Hangman Game”)
+Link to Game: [https://cdt12988.github.io/Word-Guess-Game](https://cdt12988.github.io/Word-Guess-Game "Hangman Game")
 
 This app uses vanilla JavaScript to bring the classic game of Hangman to life!
 
